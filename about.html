@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Harmony Travel and Tours</title>
+    <link rel="icon" href="images/l.jpg" type="image/x-icon">
+    <script nonce="84a158de-7f77-47a8-9f18-5359bd63bec1">(function (w, d) { !function (bg, bh, bi, bj) { bg[bi] = bg[bi] || {}; bg[bi].executed = []; bg.zaraz = { deferred: [], listeners: [] }; bg.zaraz.q = []; bg.zaraz._f = function (bk) { return function () { var bl = Array.prototype.slice.call(arguments); bg.zaraz.q.push({ m: bk, a: bl }) } }; for (const bm of ["track", "set", "debug"]) bg.zaraz[bm] = bg.zaraz._f(bm); bg.zaraz.init = () => { var bn = bh.getElementsByTagName(bj)[0], bo = bh.createElement(bj), bp = bh.getElementsByTagName("title")[0]; bp && (bg[bi].t = bh.getElementsByTagName("title")[0].text); bg[bi].x = Math.random(); bg[bi].w = bg.screen.width; bg[bi].h = bg.screen.height; bg[bi].j = bg.innerHeight; bg[bi].e = bg.innerWidth; bg[bi].l = bg.location.href; bg[bi].r = bh.referrer; bg[bi].k = bg.screen.colorDepth; bg[bi].n = bh.characterSet; bg[bi].o = (new Date).getTimezoneOffset(); if (bg.dataLayer) for (const bt of Object.entries(Object.entries(dataLayer).reduce(((bu, bv) => ({ ...bu[1], ...bv[1] })), {}))) zaraz.set(bt[0], bt[1], { scope: "page" }); bg[bi].q = []; for (; bg.zaraz.q.length;) { const bw = bg.zaraz.q.shift(); bg[bi].q.push(bw) } bo.defer = !0; for (const bx of [localStorage, sessionStorage]) Object.keys(bx || {}).filter((bz => bz.startsWith("_zaraz_"))).forEach((by => { try { bg[bi]["z_" + by.slice(7)] = JSON.parse(bx.getItem(by)) } catch{ bg[bi]["z_" + by.slice(7)] = bx.getItem(by) } })); bo.referrerPolicy = "origin"; bo.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(bg[bi]))); bn.parentNode.insertBefore(bo, bn) };["complete", "interactive"].includes(bh.readyState) ? zaraz.init() : bg.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            color: #0077be;
+            text-align: center;
+       
+        }
+        header {
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: #0077be 3px solid;
+        }
+        .logo {
+            max-width: 300px;
+            height: auto;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav ul {
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            padding: 0 20px;
+        }
+        nav a {
+            color: #0077be;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e8491d;
+        }
+        #tours {
+            padding: 20px 0;
+        }
+        .tour {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        .tour img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .tour-info h3 {
+            color: #0077be;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        #about {
+            padding: 40px 0;
+        }
+
+        .about-content {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        h2 {
+            font-size: 36px;
+            color: #0077be;
+            margin-bottom: 20px;
+        }
+        .founder-img {
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+        .contact-btn {
+            display: inline-block;
+            background-color: #0077be;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: #0077be;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            clear: both;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        .menu-icon div {
+            width: 35px;
+            height: 4px;
+            background-color: #000000;
+            margin: 6px 0;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #0077be;
+                width: 100%;
+                z-index: 1;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav li {
+                display: block;
+                padding: 10px;
+            }
+            nav a {
+                color: white;
+                font-size: 18px;
+            }
+            nav a:hover {
+                color: #e8491d;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .logo {
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.jpg" alt="Harmony Travel and Tours Logo" class="logo">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="images/CEO.jpg" alt="Founder Mihle Harmony Gabuza" class="founder-img">
+                <div class="about-info">
+                    <p><strong>Harmony Travel and Tours</strong>   is committed to providing exceptional travel experiences in Cape Town and the surrounding Western Cape cities. Guided by our slogan, Travel in Tranquility, we aim to deliver seamless, enjoyable journeys that showcase the best of our vibrant region. With a focus on personalized service and memorable adventures, we ensure every trip is as smooth and enriching as possible.
+                    Our mission is to deliver premium transportation and tour services that ensure a tranquil and enjoyable travel experience. Committed to exceptional customer service, we strive to be the preferred choice for travelers seeking unparalleled comfort, reliability, and unforgettable journeys.
+                    </p>
+
+
+                    <a href="contact.html" class="contact-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Harmony Travel and Tours. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
